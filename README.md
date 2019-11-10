@@ -31,6 +31,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 <pre>
 src:
 ├── app:
+│   ├── common:
+│   │   └── [ng g @angular/material:material-nav --name=common/menu --skip-tests] Menú de navegación (component):
+│   │   
 │   ├── [ng g m shared] Shared (Modulo):
 │   │   │  
 │   │   └── ...
