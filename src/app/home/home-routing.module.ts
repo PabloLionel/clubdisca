@@ -4,7 +4,16 @@ import { HomeComponent } from './home.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent }
+  {
+    path: '',
+    component: HomeComponent,
+    children: [
+      {
+        path: 'conversation/:uid',
+        loadChildren: async () => (await import('../conversation/conversation.module')).ConversationModule
+      }
+    ]
+  }
 ];
 
 @NgModule({

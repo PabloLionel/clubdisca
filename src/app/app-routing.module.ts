@@ -13,12 +13,12 @@ const routes: Routes = [
     loadChildren: async () => (await import('./home/home.module')).HomeModule
   },
   {
-    path: 'profile',
-    loadChildren: async () => (await import('./profile/profile.module')).ProfileModule
+    path: 'conversation/:uid',
+    loadChildren: async () => (await import('./conversation/conversation.module')).ConversationModule
   },
   {
-    path: 'conversation',
-    loadChildren: async () => (await import('./conversation/conversation.module')).ConversationModule
+    path: 'profile',
+    loadChildren: async () => (await import('./profile/profile.module')).ProfileModule
   },
   {
     path: 'signin',
@@ -28,6 +28,14 @@ const routes: Routes = [
     path: 'signup',
     loadChildren: async () => (await import('./sign-up/sign-up.module')).SignUpModule
   },
+  {
+    path: 'not-found',
+    loadChildren: async () => (await import('./common/not-found/not-found.module')).NotFoundModule
+  },
+  {
+    path: '**',
+    redirectTo: 'not-found',
+  }
 ];
 
 @NgModule({
