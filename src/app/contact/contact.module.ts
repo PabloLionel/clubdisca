@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home.component';
+import { ContactRoutingModule } from './contact-routing.module';
+import { ContactComponent } from './contact.component';
 import { SearchComponent } from './search/search.component';
 import { PipeModule } from '../shared/pipes/pipe/pipe.module';
 
@@ -21,14 +21,14 @@ const MATCOMPONENTS: any[] = [
 
 @NgModule({
   declarations: [
-    HomeComponent,
+    ContactComponent,
     SearchComponent,
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule,
+    ContactRoutingModule,
     ReactiveFormsModule,
     PipeModule,
   ].concat(MATCOMPONENTS)
 })
-export class HomeModule { }
+export class ContactModule { }

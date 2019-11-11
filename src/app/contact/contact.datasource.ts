@@ -4,7 +4,7 @@ import { ContactService } from '../shared/services/contact.service';
 @Injectable({
   providedIn: 'root'
 })
-export class HomeDataSource {
+export class ContactDataSource {
   constructor(
     private concactService: ContactService
   ) { }

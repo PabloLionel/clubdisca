@@ -1,16 +1,16 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { IContact } from '../shared/models/IContact';
-import { HomeDataSource } from './home.datasource';
+import { ContactDataSource } from './contact.datasource';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomeComponent implements OnInit {
+export class ContactComponent implements OnInit {
 
   // contacts: IContact[];
   contacts: BehaviorSubject<IContact[]> = new BehaviorSubject<IContact[]>([]);
@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
   }
 
   constructor(
-    private datasource: HomeDataSource
+    private datasource: ContactDataSource
   ) {
     this.datasource.get('contacts', data => this.contacts.next(data));
   }

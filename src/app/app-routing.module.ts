@@ -5,12 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: '',
     pathMatch: 'full'
   },
   {
-    path: 'home',
-    loadChildren: async () => (await import('./home/home.module')).HomeModule
+    path: 'contact',
+    loadChildren: async () => (await import('./contact/contact.module')).ContactModule
   },
   {
     path: 'conversation/:uid',
