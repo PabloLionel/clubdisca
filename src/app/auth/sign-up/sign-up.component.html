@@ -1,0 +1,33 @@
+<div class="register">
+  <h1 class="register__title mat-display-1">
+    Registro
+  </h1>
+  <img class="register__photo" src="/assets/images/default-avatar.svg" alt="Avatar">
+
+  <mat-form-field class="register__nick">
+    <input matInput placeholder="Nombre de Usuario" [formControl]="nick">
+    <mat-icon matSuffix>face</mat-icon>
+    <mat-error *ngIf="nick.invalid">{{getErrorMessageNick()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="register__email">
+    <input matInput placeholder="Email" [formControl]="email" required>
+    <mat-icon matSuffix>email</mat-icon>
+    <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="register__password">
+    <input matInput placeholder="Contraseña *" [formControl]="password" [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+    <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error>
+  </mat-form-field>
+
+  <mat-checkbox #termsAndConditions color="warn" class="register__termsAndConditions">
+    Acepte <a href="#">términos y condiciones</a>.
+  </mat-checkbox>
+
+  <button class="register__button" mat-raised-button color="warn" [disabled]="!termsAndConditions.checked">Registrarse</button>
+
+</div>

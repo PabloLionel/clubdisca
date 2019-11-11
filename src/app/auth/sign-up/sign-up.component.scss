@@ -1,0 +1,33 @@
+.register {
+  min-height: 460px;
+  min-width: 310px;
+  .register__email,
+  .register__password,
+  .register__button,
+  .register__nick,
+  .register__termsAndConditions
+  {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .register__title {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .register__photo {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .register__termsAndConditions {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

@@ -5,28 +5,28 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '',
+    redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    loadChildren: async () => (await import('./home/home.module')).HomeModule
   },
   {
     path: 'contact',
     loadChildren: async () => (await import('./contact/contact.module')).ContactModule
   },
-  {
-    path: 'conversation/:uid',
-    loadChildren: async () => (await import('./conversation/conversation.module')).ConversationModule
-  },
+  // {
+  //   path: 'conversation/:uid',
+  //   loadChildren: async () => (await import('./conversation/conversation.module')).ConversationModule
+  // },
   {
     path: 'profile',
     loadChildren: async () => (await import('./profile/profile.module')).ProfileModule
   },
   {
-    path: 'signin',
-    loadChildren: async () => (await import('./sign-in/sign-in.module')).SignInModule
-  },
-  {
-    path: 'signup',
-    loadChildren: async () => (await import('./sign-up/sign-up.module')).SignUpModule
+    path: 'login',
+    loadChildren: async () => (await import('./auth/auth.module')).AuthModule
   },
   {
     path: 'not-found',

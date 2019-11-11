@@ -26,7 +26,7 @@ const MATCOMPONENTS: any[] = [
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
   ],
   imports: [
     BrowserModule,

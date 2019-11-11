@@ -1,0 +1,23 @@
+<div class="login">
+  <h1 class="login__title mat-display-1">
+    Inicio de sesión
+  </h1>
+  <img class="login__photo" src="/assets/images/default-avatar.svg" alt="Avatar">
+  <mat-form-field class="login__email">
+    <input matInput placeholder="Email" [formControl]="email" required>
+    <mat-icon matSuffix>email</mat-icon>
+    <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="login__password">
+    <input matInput placeholder="Contraseña *" [formControl]="password" [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+    <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error>
+  </mat-form-field>
+
+  <button class="login__button" mat-raised-button color="warn">Iniciar sesión</button>
+
+  <a class="login__forgotPassword" href="#">¿Olvidaste tu Contraseña?</a>
+</div>

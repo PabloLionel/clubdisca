@@ -79,16 +79,18 @@ src:
 │   │   │    .
 │   │   └── ...
 │   │
+│   ├── [ng g c contact --skip-tests] Home (component):
+│   │   │
+│   │   ├── [ng g m contact --routing]
+│   │   │
+│   │   └── [ng g s contact/contact --skip-tests] ContactDataSource (datasource)
+│   │
 │   ├── [ng g c home --skip-tests] Home (component):
 │   │   │    Muestra el sitio sin inicio de sesión.
 │   │   │    Contiene:
 │   │   │       * signin
 │   │   │       * signup
-│   │   │
-│   │   ├── [ng g m home --routing]
-│   │   │
-│   │   ├── [ng g s home/home --skip-tests] HomeDataSource (datasource)
-│   │   │     Origen de datos del componente Home
+│   │   │     Origen de datos del componente Contact
 │   │   │
 │   │   └── ...
 │   │   

@@ -4,17 +4,26 @@
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item [routerLink]="[ '/contact' ]" routerLinkActive="active">Contact</a>
+    <mat-nav-list *ngIf="(isHandset$ | async); else elseMenu ">
+      <a mat-list-item [routerLink]="[ '/home' ]" routerLinkActive="active" (click)="drawer.toggle()">Inicio</a>
       <mat-divider></mat-divider>
-      <a mat-list-item [routerLink]="[ '/profile' ]" routerLinkActive="active">Profile</a>
-      <!-- <mat-divider></mat-divider> -->
-      <!-- <a mat-list-item [routerLink]="[ '/conversation' ]" routerLinkActive="active">Conversation</a> -->
+      <a mat-list-item [routerLink]="[ '/contact' ]" routerLinkActive="active" (click)="drawer.toggle()">Contactos</a>
       <mat-divider></mat-divider>
-      <a mat-list-item [routerLink]="[ '/signin' ]" routerLinkActive="active">signin</a>
-      <!-- <mat-divider></mat-divider> -->
-      <!-- <a mat-list-item [routerLink]="[ '/signup' ]" routerLinkActive="active">signup</a> -->
+      <a mat-list-item [routerLink]="[ '/profile' ]" routerLinkActive="active" (click)="drawer.toggle()">Perfil</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item [routerLink]="[ '/login' ]" routerLinkActive="active" (click)="drawer.toggle()">Sesión</a>
     </mat-nav-list>
+    <ng-template #elseMenu>
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="[ '/home' ]" routerLinkActive="active">Inicio</a>
+        <mat-divider></mat-divider>
+        <a mat-list-item [routerLink]="[ '/contact' ]" routerLinkActive="active">Contactos</a>
+        <mat-divider></mat-divider>
+        <a mat-list-item [routerLink]="[ '/profile' ]" routerLinkActive="active">Perfil</a>
+        <mat-divider></mat-divider>
+        <a mat-list-item [routerLink]="[ '/login' ]" routerLinkActive="active">Sesión</a>
+      </mat-nav-list>
+    </ng-template>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="warn">
