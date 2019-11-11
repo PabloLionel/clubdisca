@@ -16,6 +16,26 @@
   z-index: 1;
 }
 
+.mat-toolbar .user-info-container{
+  width: 100%;
+  height: 100%;
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.mat-toolbar .user-info-container .user-image img{
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+}
+
+.mat-toolbar .user-info-container .user-info{
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  margin-top: -7px;
+}
 .mat-nav-list a.active {
   background: #f4433636;
 }

@@ -3,7 +3,17 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar>
+      <div class="user-info-container">
+        <div class="user-image">
+          <img src="http://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg" 
+          alt="profile">
+        </div>
+        <div class="user-info">
+          <p class="user-name">User Name</p>
+        </div>
+      </div>
+    </mat-toolbar>
     <mat-nav-list *ngIf="(isHandset$ | async); else elseMenu ">
       <a mat-list-item [routerLink]="[ '/home' ]" routerLinkActive="active" (click)="drawer.toggle()">Inicio</a>
       <mat-divider></mat-divider>
