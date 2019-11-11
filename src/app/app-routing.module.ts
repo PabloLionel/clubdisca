@@ -16,13 +16,17 @@ const routes: Routes = [
     path: 'contact',
     loadChildren: async () => (await import('./contact/contact.module')).ContactModule
   },
-  // {
-  //   path: 'conversation/:uid',
-  //   loadChildren: async () => (await import('./conversation/conversation.module')).ConversationModule
-  // },
+  {
+    path: 'conversation/:uid',
+    loadChildren: async () => (await import('./conversation/conversation.module')).ConversationModule
+  },
   {
     path: 'profile',
     loadChildren: async () => (await import('./profile/profile.module')).ProfileModule
+  },
+  {
+    path: 'about',
+    loadChildren: async () => (await import('./about/about.module')).AboutModule
   },
   {
     path: 'login',

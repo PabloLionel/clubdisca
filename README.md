@@ -56,15 +56,22 @@ src:
 │   │   │  pensasdos sobre la logica de negocio.
 │   │   └── ...
 │   │   
-│   ├── [ng g c SignIn --skip-tests] SignIn (component):
+│   ├── [ng g c auth --skip-tests] Login (component):
+│   │   │   │ Contiene:
+│   │   │   │    * signin
+│   │   │   │    * signup
+│   │   │   │
+│   │   │   └── [ng g m auth --routing]
 │   │   │
-│   │   └── [ng g m SignIn --routing]
-│   │       └──[ng g c login/application-card/application]
-│   │
-│   ├── [ng g c SignUp --skip-tests] SignIn (component):
+│   │   ├── [ng g c SignIn --skip-tests] SignIn (component):
+│   │   │   │
+│   │   │   └── [ng g m SignIn --routing]
+│   │   │       └──[ng g c login/application-card/application]
 │   │   │
-│   │   └── [ng g m SignUp --routing]
-│   │       └──[ng g c login/application-card/application]
+│   │   └── [ng g c SignUp --skip-tests] SignIn (component):
+│   │       │
+│   │       └── [ng g m SignUp --routing]
+│   │           └──[ng g c login/application-card/application]
 │   │   
 │   ├── [ng g c Profile --skip-tests] Profile (component):
 │   │   │    .
@@ -79,19 +86,36 @@ src:
 │   │   │    .
 │   │   └── ...
 │   │
-│   ├── [ng g c contact --skip-tests] Home (component):
+│   ├── [ng g c notifications --skip-tests] notifications (component):
+│   │   │
+│   │   ├── [ng g m notifications --routing]
+│   │   └── ...
+│   │
+│   ├── [ng g c about --skip-tests] about (component):
+│   │   │
+│   │   ├── [ng g m about --routing]
+│   │   └── ...
+│   │
+│   ├── [ng g c contact --skip-tests] contact (component):
 │   │   │
 │   │   ├── [ng g m contact --routing]
 │   │   │
 │   │   └── [ng g s contact/contact --skip-tests] ContactDataSource (datasource)
 │   │
 │   ├── [ng g c home --skip-tests] Home (component):
-│   │   │    Muestra el sitio sin inicio de sesión.
+│   │   │    Muestra el sitio con inicio de sesión.
 │   │   │    Contiene:
-│   │   │       * signin
-│   │   │       * signup
-│   │   │     Origen de datos del componente Contact
-│   │   │
+│   │   │       * Contar una historia ()
+│   │   │       * historias
+│   │   │   
+│   │   ├── [ng g c home/PostStory --skip-tests]
+│   │   │   │
+│   │   │   └── [ng g m home/PostStory --routing]
+│   │   │   
+│   │   ├── [ng g c home/stories --skip-tests]
+│   │   │   │
+│   │   │   └── [ng g m home/Stories --routing]
+│   │   │   
 │   │   └── ...
 │   │   
 │   └── ...

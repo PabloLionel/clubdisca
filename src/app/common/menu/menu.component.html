@@ -11,6 +11,8 @@
       <mat-divider></mat-divider>
       <a mat-list-item [routerLink]="[ '/profile' ]" routerLinkActive="active" (click)="drawer.toggle()">Perfil</a>
       <mat-divider></mat-divider>
+      <a mat-list-item [routerLink]="[ '/about' ]" routerLinkActive="active" (click)="drawer.toggle()">Acerca de</a>
+      <mat-divider></mat-divider>
       <a mat-list-item [routerLink]="[ '/login' ]" routerLinkActive="active" (click)="drawer.toggle()">Sesión</a>
     </mat-nav-list>
     <ng-template #elseMenu>
@@ -20,6 +22,8 @@
         <a mat-list-item [routerLink]="[ '/contact' ]" routerLinkActive="active">Contactos</a>
         <mat-divider></mat-divider>
         <a mat-list-item [routerLink]="[ '/profile' ]" routerLinkActive="active">Perfil</a>
+        <mat-divider></mat-divider>
+        <a mat-list-item [routerLink]="[ '/about' ]" routerLinkActive="active">Acerca de</a>
         <mat-divider></mat-divider>
         <a mat-list-item [routerLink]="[ '/login' ]" routerLinkActive="active">Sesión</a>
       </mat-nav-list>
