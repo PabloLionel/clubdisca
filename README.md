@@ -1,4 +1,5 @@
-# Trewsenger
+# ClubDisca
+Proyecto info. 2019 para Club Discas 🐕, una organización protectora de animales destinada el bienestar del mejor amigo del hombre 🐶 y todo pequeño de cuatro patas que se le parezca 🐈.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
 
