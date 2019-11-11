@@ -28,13 +28,24 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Project structure
 
+### Aclaraciones
+- Datasource: se implementan mediante un servicio en un componente, sin embargo el comando `ng g s` no tiene la opcion --type para reescribir el tipo generado por lo que tendremos que generar un servicio, y cambiarlo manualmente:
+  exaple.service.ts --> example.datasource.ts
+
 <pre>
 src:
 ├── app:
 │   ├── common:
 │   │   └── [ng g @angular/material:material-nav --name=common/menu --skip-tests] Menú de navegación (component):
 │   │   
-│   ├── [ng g m shared] Shared (Modulo):
+│   ├── [ng g s shared/services/contact --skip-tests] Shared (Modulo):
+│   │   │  
+│   │   └── ...
+│   │   
+│   ├── [ng g p shared/pipes/filter] Filter (Modulo):
+│   │     Filter: filter para listas generadas con *ngFor
+│   │
+│   ├── [ng g m shared/pipes/pipe] Shared (Modulo):
 │   │   │  
 │   │   └── ...
 │   │   
@@ -62,7 +73,7 @@ src:
 │   │   └── ...
 │   │
 │   │   
-│   ├── [ng g c Conversation --skip-tests] Conversation (component):
+│   ├── [ng g c Conversation --skip-tests] Conversation (component)
 │   │   │    .
 │   │   ├── [ng g m Conversation --routing]
 │   │   │    .
@@ -75,6 +86,9 @@ src:
 │   │   │       * signup
 │   │   │
 │   │   ├── [ng g m home --routing]
+│   │   │
+│   │   ├── [ng g s home/home --skip-tests] HomeDataSource (datasource)
+│   │   │     Origen de datos del componente Home
 │   │   │
 │   │   └── ...
 │   │   
