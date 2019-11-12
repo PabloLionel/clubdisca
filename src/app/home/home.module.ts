@@ -6,6 +6,11 @@ import { HomeComponent } from './home.component';
 import { PostStoryModule } from './post-story/post-story.module';
 import { StoriesModule } from './stories/stories.module';
 
+import { MatCardModule } from '@angular/material/card';
+const MATCOMPONENTS: any[] = [
+  MatCardModule,
+];
+
 @NgModule({
   declarations: [
     HomeComponent,
@@ -15,6 +20,6 @@ import { StoriesModule } from './stories/stories.module';
     HomeRoutingModule,
     PostStoryModule,
     StoriesModule
-  ]
+  ].concat(MATCOMPONENTS)
 })
 export class HomeModule { }

@@ -6,3 +6,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .full-width {
   width: 100%;
 }
+
+.s{ min-height: 15vh }
+.m { min-height: 50vh }
+.l { min-height: 70vh }
+.xl { min-height: 100vh }
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat : no-repeat;
+  background-size: cover;
+}

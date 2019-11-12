@@ -1,1 +1,15 @@
-<p>post-story works!</p>
+<mat-card class="post">
+  <form [formGroup]="frmPost" (submit)="onSubmit($event)">
+
+    <mat-form-field class="full-width">
+      <textarea (keyup)="textareaAutoSize($event)" rows="1" formControlName="post" matInput placeholder="Nueva historia..."></textarea>
+    </mat-form-field>
+
+    <div mat-dialog-actions class="post__actions" align="end">
+      <mat-icon aria-hidden="false" aria-label="to post" (click)="true">add_photo_alternate</mat-icon>
+      <mat-icon aria-hidden="false" aria-label="to post" (click)="true">attach_file</mat-icon>
+      <mat-icon aria-hidden="false" aria-label="to post" (click)="true">tag_faces</mat-icon>
+      <button mat-raised-button color="warn" [disabled]="post.lenght" type="submit">Publicar</button>
+    </div>
+  </form>
+</mat-card>
