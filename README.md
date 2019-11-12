@@ -78,8 +78,13 @@ src:
 │   │   │    .
 │   │   ├── [ng g m Profile --routing]
 │   │   │    .
-│   │   └── ...
-│   │
+│   │   ├── [ng g c profile/EditProfile --skip-tests] EditProfil (component)
+│   │   │   │   
+│   │   │   └── [ng g m profile/EditProfile --routing]
+│   │   │
+│   │   └── [ng g c profile/publications --skip-tests] EditProfil (component)
+│   │       │   
+│   │       └── [ng g m profile/publications --routing]
 │   │   
 │   ├── [ng g c Conversation --skip-tests] Conversation (component)
 │   │   │    .
@@ -90,6 +95,7 @@ src:
 │   ├── [ng g c notifications --skip-tests] notifications (component):
 │   │   │
 │   │   ├── [ng g m notifications --routing]
+│   │   │
 │   │   └── ...
 │   │
 │   ├── [ng g c about --skip-tests] about (component):

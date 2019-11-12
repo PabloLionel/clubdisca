@@ -8,13 +8,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .s{ min-height: 15vh }
-.m { min-height: 50vh }
-.l { min-height: 70vh }
-.xl { min-height: 100vh }
+.m { min-height: 28vh }
+.l { min-height: 50vh }
+.xl { min-height: 80vh }
 
 .parallax {
   background-attachment: fixed;
   background-position: center;
+  background-repeat : no-repeat;
+  background-size: cover;
+}
+
+.parallax--top {
+  background-attachment: fixed;
+  background-position: top;
   background-repeat : no-repeat;
   background-size: cover;
 }

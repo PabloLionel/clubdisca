@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PostStoryComponent } from './post-story.component';
+import { PostStoryComponent } from '../home/post-story/post-story.component';
 
 
 const routes: Routes = [

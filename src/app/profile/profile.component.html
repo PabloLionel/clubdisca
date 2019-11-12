@@ -1,2 +1,27 @@
+<!-- Usuario:
+Nombre*; Edad*; Nro. Contacto*;
 
-<p>profile works!</p>
+Mascota:
+Nombre*; Edad; Estado;
+
+Post:
+Tag; Estado*; Contacto*; Fecha*; Descripción*;
+[style.backgroundImage]="'url(' + pathUrl + ')'"
+
+-->
+<div class="profile__header parallax--top m" style="background-image: url(assets/images/avatar-main-1024x576.png)" (click)="changeProfileHeader()"></div>
+
+<mat-toolbar>
+  <span class="toolbar-flex"></span>
+    <nav mat-tab-nav-bar>
+      <a mat-tab-link
+        *ngFor="let link of navLinks"
+        [routerLink]="link.path"
+        routerLinkActive #rla="routerLinkActive"
+        [active]="rla.isActive">
+      {{link.label}}
+      </a>
+    </nav>
+  <span class="toolbar-flex"></span>
+</mat-toolbar>
+<router-outlet></router-outlet>

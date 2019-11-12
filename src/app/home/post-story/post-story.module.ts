@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { PostStoryRoutingModule } from './post-story-routing.module';
+import { PostStoryRoutingModule } from '../../common/post-story-routing.module';
 import { PostStoryComponent } from './post-story.component';
 
 import {MatCardModule} from '@angular/material/card';
