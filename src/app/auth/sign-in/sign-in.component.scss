@@ -1,6 +1,7 @@
 .login {
   min-height: 460px;
   min-width: 310px;
+  background-color: white;
   .login__email,
   .login__password,
   .login__button,
@@ -30,4 +31,5 @@
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
 }
