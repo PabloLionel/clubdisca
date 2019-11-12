@@ -1,9 +1,11 @@
-.mat-grid-list
-{
-   background-image: url("../../assets/images/login_background.jpg");
+.mat-grid-list {
+  // background-image: url("/assets/images/login_background.jpg");
+  background-image: linear-gradient( #fafafa1f, #fafafa), url("/assets/images/login_background.jpg");
+
 }
 
 .mat-tab-group {
   border-radius: 5px;
   background-color: white;
 }
+
