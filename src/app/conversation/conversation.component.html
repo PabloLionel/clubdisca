@@ -1,2 +1,33 @@
+<mat-toolbar>
+  <span>{{contact.name}}</span>
+  <mat-hint>[Escribiendo...]</mat-hint>
+  <span class="space"></span>
+</mat-toolbar>
+
+<mat-grid-list cols="1" rowHeight="40vh">
+  <mat-grid-tile rowspan="2">
+    <article class="chat__body">
+
+    </article>
+    <mat-grid-tile-footer>
+      <div class="chat__message">
+        <form [formGroup]="frmMsg" (ngSubmit)="onSubmit()">
+
+          <mat-form-field>
+            <!-- (keyup)="textareaAutoSize($event)" -->
+            <textarea rows="1" formControlName="message" matInput placeholder="Mensaje..."></textarea>
+          </mat-form-field>
+
+          <button mat-button class="chat__send">Enviar</button>
+        </form>
+
+        <!-- <textarea name="" id="" cols="30" rows="1"></textarea> -->
+      </div>
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<section class="chat">
+</section>
 
 <p>{{contact | json}}</p>

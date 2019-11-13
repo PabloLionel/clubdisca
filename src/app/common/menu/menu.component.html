@@ -4,7 +4,7 @@
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>
-      <div class="user-info-container">
+      <a [routerLink]="[ '/profile' ]" class="user-info-container">
         <div class="user-image">
           <img src="http://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg"
           alt="profile">
@@ -12,7 +12,7 @@
         <div class="user-info">
           <p class="user-name">Viky84</p>
         </div>
-      </div>
+      </a>
     </mat-toolbar>
     <mat-nav-list *ngIf="(isHandset$ | async); else elseMenu ">
       <a mat-list-item [routerLink]="[ '/home' ]" routerLinkActive="active" (click)="drawer.toggle()">Inicio</a>
@@ -38,6 +38,23 @@
         <a mat-list-item [routerLink]="[ '/login' ]" routerLinkActive="active">Sesión</a>
       </mat-nav-list>
     </ng-template>
+    <div class="social">
+      <button class="mat-elevation-z0 social__button" mat-mini-fab color="warn">
+        <mat-icon>
+          favorite
+        </mat-icon>
+      </button>
+      <button class="mat-elevation-z0 social__button" mat-mini-fab color="warn">
+        <mat-icon>
+          favorite
+        </mat-icon>
+      </button>
+      <button class="mat-elevation-z0 social__button" mat-mini-fab color="warn">
+        <mat-icon>
+          favorite
+        </mat-icon>
+      </button>
+    </div>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="warn">
@@ -49,7 +66,8 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>ClubDisca</span>
+      <span>ClubDiscas</span>
+      <span class="spacer"></span>
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>
