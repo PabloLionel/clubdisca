@@ -29,6 +29,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Project structure
 
+http://192.168.0.103:8080/posts
+
 ### Aclaraciones
 - Datasource: se implementan mediante un servicio en un componente, sin embargo el comando `ng g s` no tiene la opcion --type para reescribir el tipo generado por lo que tendremos que generar un servicio, y cambiarlo manualmente:
   exaple.service.ts --> example.datasource.ts
@@ -37,19 +39,22 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 src:
 ├── app:
 │   ├── common:
-│   │   └── [ng g @angular/material:material-nav --name=common/menu --skip-tests] Menú de navegación (component):
-│   │   
+│   │   ├── [ng g @angular/material:material-nav --name=common/menu --skip-tests] Menú de navegación (component):
+│   │   │
+│   │   └── [ng g c common/footer --skip-tests]
+│   │       │
+│   │       └── [ng g m common/footer --skip-tests]
+│   │
 │   ├── [ng g s shared/services/contact --skip-tests] Shared (Modulo):
 │   │   │  
 │   │   └── ...
 │   │   
-│   ├── [ng g p shared/pipes/filter] Filter (Modulo):
-│   │     Filter: filter para listas generadas con *ngFor
-│   │
-│   ├── [ng g m shared/pipes/pipe] Shared (Modulo):
+│   ├── [ng g p shared/pipes/filter] Filter (Pipe):
+│   │   │ Filter: filter para listas generadas con *ngFor
 │   │   │  
-│   │   └── ...
-│   │   
+│   │   └── [ng g m shared/pipes/pipe] Filter (Modulo):
+│   │
+│   │
 │   ├── [ng g m core] Core (Modulo):
 │   │   │    Es muy parecido a un modulo helper o utils ya que
 │   │   │  contiene servicios, componentes, etc. que se podrian
@@ -98,6 +103,21 @@ src:
 │   │   │
 │   │   └── ...
 │   │
+│   ├── [ng g c story --skip-tests] story (component):
+│   │   │
+│   │   ├── [ng g m story --routing]
+│   │   │   │
+│   │   │   ├── [ng g c story/state --skip-tests]
+│   │   │   │   │
+│   │   │   │   ├── [ng g m story/state --routing]
+│   │   │   │   │
+│   │   │   │   └── ...
+│   │   │   │   
+│   │   │   └── ...
+│   │   │
+│   │   └── ...
+│   │
+│   │
 │   ├── [ng g c about --skip-tests] about (component):
 │   │   │
 │   │   ├── [ng g m about --routing]
@@ -129,3 +149,9 @@ src:
 │   
 └── ...
 <pre>
+
+## Dependencias
+
+npm i ngx-spinner -S
+npm i simplebar-angular -S
+npm i ngx-toastr -S

@@ -6,11 +6,12 @@ import { StoriesComponent } from './stories.component';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material';
 // import { MatDividerModule } from '@angular/material/divider';
 const MATCOMPONENTS: any[] = [
   MatCardModule,
   MatButtonModule,
-  // MatDividerModule
+  MatIconModule
 ];
 
 @NgModule({

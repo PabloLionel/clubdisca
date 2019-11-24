@@ -58,17 +58,21 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="warn">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>ClubDiscas</span>
-      <span class="spacer"></span>
+      <div class="container">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>ClubDiscas</span>
+        <span class="spacer"></span>
+      </div>
     </mat-toolbar>
-    <ng-content></ng-content>
+    <ngx-simplebar [options]="options">
+      <ng-content></ng-content>
+    </ngx-simplebar>
   </mat-sidenav-content>
 </mat-sidenav-container>

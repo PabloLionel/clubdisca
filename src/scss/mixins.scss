@@ -1,0 +1,27 @@
+@import "./base.scss";
+//MediaQueries
+@mixin mq($bp: $m){
+  @media all and (max-width:$bp){
+    @content
+  }
+}
+
+@mixin mq-to($bp: $m){
+  @media all and (min-width: $bp){
+    @content
+  }
+}
+
+@mixin mq-between($a: $m, $b: $w){
+  @media all and (min-width:$a) and (max-width: $b){
+    @content
+  }
+}
+
+// Helpers
+@mixin reset-list(){
+  margin-top:0;
+  margin-bottom:0;
+  padding-left:0;
+  list-style: none;
+}

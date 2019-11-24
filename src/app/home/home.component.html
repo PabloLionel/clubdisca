@@ -1,6 +1,19 @@
-<div mat-card-image class="parallax s" style="background-image: url(https://st3.depositphotos.com/1602129/16984/v/1600/depositphotos_169843612-stock-illustration-seamless-pattern-with-dog-footprints.jpg)"></div>
+<div class="container">
+  <div class="parallax parallax--s"
+    style="background-image: url(https://st3.depositphotos.com/1602129/16984/v/1600/depositphotos_169843612-stock-illustration-seamless-pattern-with-dog-footprints.jpg)"></div>
 
-<h1 class="mat-display-2">Historias :D</h1>
-<app-post-story></app-post-story>
-<br>
-<app-stories></app-stories>
+  <h1 class="mat-display-2">Historias :D</h1>
+  <app-post-story></app-post-story>
+  <br>
+  <!-- class="infinite-scroll" -->
+  <div
+      infiniteScroll
+      [infiniteScrollDistance]="1"
+      [infiniteScrollUpDistance]="1.5"
+      [infiniteScrollThrottle]="5"
+      (scrolled)="onScrollDown()"
+      (scrolledUp)="onScrollUp()"
+      [scrollWindow]="false">
+    <app-stories *ngFor="let story of stories" [story]="story"></app-stories>
+  </div>
+</div>

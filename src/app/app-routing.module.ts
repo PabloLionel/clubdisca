@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
     path: 'home',
     loadChildren: async () => (await import('./home/home.module')).HomeModule
+  },
+  {
+    path: 'story/:uid',
+    loadChildren: async () => (await import('./story/story.module')).StoryModule
   },
   {
     path: 'contact',
@@ -36,14 +40,18 @@ const routes: Routes = [
     path: 'not-found',
     loadChildren: async () => (await import('./common/not-found/not-found.module')).NotFoundModule
   },
-  {
-    path: '**',
-    redirectTo: 'not-found',
-  }
+  // {
+  //   path: '**',
+  //   redirectTo: 'not-found',
+  // }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      preloadingStrategy: PreloadAllModules
+    })
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

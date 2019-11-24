@@ -1,11 +1,18 @@
 .story {
-  max-width: 400px;
+  img {
+    display: block;
+    height: 170px;
+    width: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 8px;
+  &__header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
 }
 
-.story__header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
-}

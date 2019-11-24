@@ -1,3 +1,5 @@
+@import "./scss/base.scss";
+@import "./scss/mixins.scss";
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
@@ -11,21 +13,107 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   width: 100%;
 }
 
-.s{ min-height: 15vh }
-.m { min-height: 28vh }
-.l { min-height: 50vh }
-.xl { min-height: 80vh }
-
 .parallax {
+
   background-attachment: fixed;
   background-position: center;
   background-repeat : no-repeat;
   background-size: cover;
+  &--top {
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat : no-repeat;
+    background-size: cover;
+  }
+  &--s { min-height: 15vh }
+  &--m { min-height: 28vh }
+  &--l { min-height: 50vh }
+  &--x { min-height: 80vh }
 }
 
-.parallax--top {
-  background-attachment: fixed;
-  background-position: top;
-  background-repeat : no-repeat;
-  background-size: cover;
+.m-auto{
+  margin-left:auto;
+  margin-right: auto;
+}
+.inline-block { display: inline-block; }
+.none { display: none; }
+.block { display: block; }
+.flex { display: flex; }
+@include mq($s) {
+  .s-inline-block { display: inline-block; }
+  .s-none { display: none; }
+  .s-block { display: block; }
+  .s-flex { display: flex; }
+}
+@include mq-between($s,$m) {
+  .m-inline-block { display: inline-block; }
+  .m-none { display: none; }
+  .m-block { display: block; }
+  .m-flex { display: flex; }
+}
+@include mq-between($m,$w){
+  .w-inline-block { display: inline-block; }
+  .w-none { display: none; }
+  .w-block { display: block; }
+  .w-flex { display: flex; }
+}
+@include mq-between($w,$l){
+  .l-inline-block { display: inline-block; }
+  .l-none { display: none; }
+  .l-block { display: block; }
+  .l-flex { display: flex; }
+}
+@include mq-to($l){
+  .l-inline-block { display: inline-block; }
+  .x-none { display: none; }
+  .x-block { display: block; }
+  .x-flex { display: flex; }
+}
+@each $size, $screen in $sizes {
+  @include mq-to($screen) {
+    @for $i from 1 through 2 {
+      .#{$size}-1-#{3*$i}{width: #{100%*(1/(3*$i))};}
+    }
+    @for $i from 1 through 100 {
+      .#{$size}-#{$i}{width: #{$i*1%};}
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 50px 20px;
+  @include mq-to($s) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mq-to($w) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  $padding: 16px;
+  width: 92%; // no sé xq solo esta proporcion funciona bien en el container del menu
+  padding-left: $padding;
+  padding-right: $padding;
+  margin-left: auto;
+  margin-right: auto;
+  @include mq-between($s, $m) {
+    max-width: $m * .7;
+  }
+  @include mq-between($m, $w) {
+    max-width: $w * .7;
+  }
+  @include mq-between($w, $l) {
+    max-width: $l * .6;
+  }
+  @include mq-to($l) {
+    max-width: $l;
+  }
 }

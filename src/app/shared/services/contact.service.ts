@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
 import { IContact } from '../models/IContact';
 import { IGateway, IFindOptions } from '../models/IFindOptions';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService implements IGateway {
+
+  URL_API = `${environment.URL}:${environment.PORT}`;
+
   private contacts: IContact[] = [
     {
       uid: 1,
@@ -48,8 +52,6 @@ export class ContactService implements IGateway {
       updated: new Date('1/18/16'),
     }
   ];
-
-  constructor() { }
 
   find(o?: IFindOptions) {
     if (!o) { return this.contacts; }

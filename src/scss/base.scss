@@ -1,0 +1,13 @@
+//[[[[[[[[[[[[[[[[[[CUSTOMS]]]]]]]]]]]]]]]]]]
+//Responsives
+$s:576px;// Small devices (landscape phones)
+$m:768px;// Medium devices (tablets)
+$w:992px;// Large devices (desktops)
+$l:1200px;// Extra large devices (large desktops,  and up)
+$sizes : (
+  s: 0,
+  m: $s,
+  w: $m,
+  l: $w,
+  x: $l
+);//MAPA de Media Queries

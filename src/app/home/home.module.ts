@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { PostStoryModule } from './post-story/post-story.module';
@@ -19,7 +21,8 @@ const MATCOMPONENTS: any[] = [
     CommonModule,
     HomeRoutingModule,
     PostStoryModule,
-    StoriesModule
+    StoriesModule,
+    InfiniteScrollModule
   ].concat(MATCOMPONENTS)
 })
 export class HomeModule { }
