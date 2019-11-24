@@ -6,6 +6,7 @@ import { AboutRoutingModule } from './about-routing.module';
 import { AboutComponent } from './about.component';
 
 import { MatSnackBarModule, MatDividerModule } from '@angular/material';
+import { CommonsModule } from '../commons/commons.module';
 const MATCOMPONENTS: any[] = [
   MatSnackBarModule,
   MatDividerModule
@@ -19,6 +20,7 @@ const MATCOMPONENTS: any[] = [
     CommonModule,
     MatCarouselModule.forRoot(),
     AboutRoutingModule,
+    CommonsModule
   ].concat(MATCOMPONENTS)
 })
 export class AboutModule { }

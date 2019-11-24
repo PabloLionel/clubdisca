@@ -38,12 +38,17 @@ http://192.168.0.103:8080/posts
 <pre>
 src:
 ├── app:
-│   ├── common:
+│   ├── [ng g m common] common:
+│   │   │
 │   │   ├── [ng g @angular/material:material-nav --name=common/menu --skip-tests] Menú de navegación (component):
+│   │   │
+│   │   ├── [ng g c common/header --skip-tests --export] Header (component):
+│   │   │   │
+│   │   │   └── []
 │   │   │
 │   │   └── [ng g c common/footer --skip-tests]
 │   │       │
-│   │       └── [ng g m common/footer --skip-tests]
+│   │       └── []
 │   │
 │   ├── [ng g s shared/services/contact --skip-tests] Shared (Modulo):
 │   │   │  

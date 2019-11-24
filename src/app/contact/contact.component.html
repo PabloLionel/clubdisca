@@ -1,19 +1,21 @@
-<div class="container">
-  <h1>Sociales</h1>
-  <app-search  (searchEmitter)="handleSearch($event)"></app-search>
-  <mat-list>
-    <h3 mat-subheader>Amigos</h3>
-    <mat-list-item matRipple *ngFor="let friend of friends | async | filter:(filterValue | async)">
-      <mat-icon mat-list-icon>face</mat-icon>
-      <h4 [routerLink]="[ '/conversation', friend.uid ]" mat-line>{{ friend.name }}</h4>
-      <p mat-line> {{ friend.updated | date }} </p>
-    </mat-list-item>
-    <mat-divider></mat-divider>
-    <h3 mat-subheader>Desconocidos</h3>
-    <mat-list-item matRipple *ngFor="let unnamed of unknown | async | filter:(filterValue | async)">
-      <mat-icon mat-list-icon>sentiment_dissatisfied</mat-icon>
-      <h4 [routerLink]="[ '/conversation', unnamed.uid ]" mat-line>{{ unnamed.name }}</h4>
-      <p mat-line> {{ unnamed.updated | date }} </p>
-    </mat-list-item>
-  </mat-list>
-</div>
+<app-menu>
+  <div class="container">
+    <h1>Sociales</h1>
+    <app-search  (searchEmitter)="handleSearch($event)"></app-search>
+    <mat-list>
+      <h3 mat-subheader>Amigos</h3>
+      <mat-list-item matRipple *ngFor="let friend of friends | async | filter:(filterValue | async)">
+        <mat-icon mat-list-icon>face</mat-icon>
+        <h4 [routerLink]="[ '/conversation', friend.uid ]" mat-line>{{ friend.name }}</h4>
+        <p mat-line> {{ friend.updated | date }} </p>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <h3 mat-subheader>Desconocidos</h3>
+      <mat-list-item matRipple *ngFor="let unnamed of unknown | async | filter:(filterValue | async)">
+        <mat-icon mat-list-icon>sentiment_dissatisfied</mat-icon>
+        <h4 [routerLink]="[ '/conversation', unnamed.uid ]" mat-line>{{ unnamed.name }}</h4>
+        <p mat-line> {{ unnamed.updated | date }} </p>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</app-menu>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { CommonsModule } from '../commons/commons.module';
 import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileComponent } from './profile.component';
 import {MatTabsModule} from '@angular/material/tabs';
@@ -16,7 +17,8 @@ const MATCOMPONENTS: any[] = [
   ],
   imports: [
     CommonModule,
-    ProfileRoutingModule
+    ProfileRoutingModule,
+    CommonsModule
   ].concat(MATCOMPONENTS)
 })
 export class ProfileModule { }

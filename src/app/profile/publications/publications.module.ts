@@ -4,7 +4,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 import { PublicationsRoutingModule } from './publications-routing.module';
 import { PublicationsComponent } from './publications.component';
-import { StoriesModule } from 'src/app/common/stories/stories.module';
+import { StoriesModule } from 'src/app/commons/stories/stories.module';
 
 
 @NgModule({

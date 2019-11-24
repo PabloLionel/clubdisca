@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { CommonsModule } from '../commons/commons.module';
 import { StoryRoutingModule } from './story-routing.module';
 import { StoryComponent } from './story.component';
 import { StateModule } from './state/state.module';
@@ -11,7 +12,8 @@ import { StateModule } from './state/state.module';
   imports: [
     CommonModule,
     StoryRoutingModule,
-    StateModule
+    StateModule,
+    CommonsModule
   ],
   exports: [StoryComponent]
 })

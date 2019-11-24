@@ -1,88 +1,90 @@
-<div class="container">
-  <h1 class="mat-display-4">
-    Club de los discas
-  </h1>
+<app-menu>
+  <div class="container">
+    <h1 class="mat-display-4">
+      Club de los discas
+    </h1>
 
-  <!-- (change)="onChange($event)" eventEmitter de mat-carousel tag-->
-  <mat-carousel
-    #matCarousel
-    [timings]="timings"
-    [autoplay]="autoplay"
-    [interval]="interval"
-    [loop]="loop"
-    [hideArrows]="hideArrows"
-    [hideIndicators]="hideIndicators"
-    [color]="color"
-    [maxWidth]="maxWidth"
-    [proportion]="proportion"
-    [useKeyboard]="useKeyboard"
-    [useMouseWheel]="useMouseWheel"
-    [orientation]="orientation"
-    [slides]="slides">
-    <mat-carousel-slide
-      #matCarouselSlide
-      *ngFor="let slide of slidesList; let i = index"
-      [image]="slide.image"
-      [overlayColor]="overlayColor"
-      [hideOverlay]="hideOverlay"
-    >
-      <!-- <ng-container *ngIf="showContent">
-        <div
-          style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center"
-        >
-          <h1>{{ i }}</h1>
-          <p>disabled: {{ matCarouselSlide.disabled }}</p>
-          <button
-            mat-flat-button
-            (click)="matCarouselSlide.disabled = !matCarouselSlide.disabled"
+    <!-- (change)="onChange($event)" eventEmitter de mat-carousel tag-->
+    <mat-carousel
+      #matCarousel
+      [timings]="timings"
+      [autoplay]="autoplay"
+      [interval]="interval"
+      [loop]="loop"
+      [hideArrows]="hideArrows"
+      [hideIndicators]="hideIndicators"
+      [color]="color"
+      [maxWidth]="maxWidth"
+      [proportion]="proportion"
+      [useKeyboard]="useKeyboard"
+      [useMouseWheel]="useMouseWheel"
+      [orientation]="orientation"
+      [slides]="slides">
+      <mat-carousel-slide
+        #matCarouselSlide
+        *ngFor="let slide of slidesList; let i = index"
+        [image]="slide.image"
+        [overlayColor]="overlayColor"
+        [hideOverlay]="hideOverlay"
+      >
+        <!-- <ng-container *ngIf="showContent">
+          <div
+            style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center"
           >
-            Click me!
-          </button>
-        </div>
-      </ng-container> -->
-    </mat-carousel-slide>
-  </mat-carousel>
+            <h1>{{ i }}</h1>
+            <p>disabled: {{ matCarouselSlide.disabled }}</p>
+            <button
+              mat-flat-button
+              (click)="matCarouselSlide.disabled = !matCarouselSlide.disabled"
+            >
+              Click me!
+            </button>
+          </div>
+        </ng-container> -->
+      </mat-carousel-slide>
+    </mat-carousel>
 
-  <!-- <mat-carousel>
-    <mat-carousel-slide *ngFor="let slider of sliders; trackBy:slider.id" [id]="slider.id" [image]="slider.image"></mat-carousel-slide>
-  </mat-carousel> -->
+    <!-- <mat-carousel>
+      <mat-carousel-slide *ngFor="let slider of sliders; trackBy:slider.id" [id]="slider.id" [image]="slider.image"></mat-carousel-slide>
+    </mat-carousel> -->
 
-  <h2 class="mat-display-2">
-    Quiénes somos?
-  </h2>
-  <p>
-    Somos una asociación civil sin fines de lucro, que tiene como objetivo mejorar
-    la calidad de vida de los animales y brindar asesoramiento legal acerca de los
-    derechos de los animales.
-  </p>
+    <h2 class="mat-display-2">
+      Quiénes somos?
+    </h2>
+    <p>
+      Somos una asociación civil sin fines de lucro, que tiene como objetivo mejorar
+      la calidad de vida de los animales y brindar asesoramiento legal acerca de los
+      derechos de los animales.
+    </p>
 
-  <h2 class="mat-display-2">
-    A que nos dedicamos?
-  </h2>
-  <p>
-    Principalmente, se trata de educar y concientizar a la población dando
-    charlas, eventos, acerca de los cuidados que se deben tener con los animales y
-    aquellas responsabilidades que recaen en los responsables a la hora de cuidar
-    un animal, y dando un soporte social, económico y legal. Social por buscar
-    educar a la población en lo anterior mencionado. Económico, mediante el
-    apadrinamiento y/o donación de aquellos productos (además del dinero) que
-    puedan ser de ayuda para el animal. Legal, brindando un sostén para la
-    protección de sus derechos.
-  </p>
+    <h2 class="mat-display-2">
+      A que nos dedicamos?
+    </h2>
+    <p>
+      Principalmente, se trata de educar y concientizar a la población dando
+      charlas, eventos, acerca de los cuidados que se deben tener con los animales y
+      aquellas responsabilidades que recaen en los responsables a la hora de cuidar
+      un animal, y dando un soporte social, económico y legal. Social por buscar
+      educar a la población en lo anterior mencionado. Económico, mediante el
+      apadrinamiento y/o donación de aquellos productos (además del dinero) que
+      puedan ser de ayuda para el animal. Legal, brindando un sostén para la
+      protección de sus derechos.
+    </p>
 
-  <h2 class="mat-display-2">
-    Cómo empezó?
-  </h2>
+    <h2 class="mat-display-2">
+      Cómo empezó?
+    </h2>
 
-  <h2 class="mat-display-2">
-    Que nos impulsa?
-  </h2>
+    <h2 class="mat-display-2">
+      Que nos impulsa?
+    </h2>
 
-  <h2 class="mat-display-2">
-    Apoyo legal:
-  </h2>
+    <h2 class="mat-display-2">
+      Apoyo legal:
+    </h2>
 
-  <h2 class="mat-display-2">
-    Contacto:
-  </h2>
-</div>
+    <h2 class="mat-display-2">
+      Contacto:
+    </h2>
+  </div>
+</app-menu>

@@ -38,7 +38,7 @@ const routes: Routes = [
   },
   {
     path: 'not-found',
-    loadChildren: async () => (await import('./common/not-found/not-found.module')).NotFoundModule
+    loadChildren: async () => (await import('./commons/not-found/not-found.module')).NotFoundModule
   },
   // {
   //   path: '**',
@@ -48,9 +48,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, {
-      preloadingStrategy: PreloadAllModules
-    })
+    RouterModule.forRoot(routes, {})
   ],
   exports: [RouterModule]
 })

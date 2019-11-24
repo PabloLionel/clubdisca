@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ConversationRoutingModule } from './conversation-routing.module';
 import { ConversationComponent } from './conversation.component';
 import { MatToolbarModule, MatInputModule, MatIconModule, MatButtonModule, MatGridListModule } from '@angular/material';
+import { CommonsModule } from '../commons/commons.module';
 const MATCOMPONENTS: any[] = [
   MatToolbarModule,
   MatInputModule,
@@ -20,7 +21,8 @@ const MATCOMPONENTS: any[] = [
   imports: [
     CommonModule,
     ConversationRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonsModule
   ].concat(MATCOMPONENTS)
 })
 export class ConversationModule { }

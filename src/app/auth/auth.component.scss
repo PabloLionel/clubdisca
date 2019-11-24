@@ -9,3 +9,5 @@
   background-color: white;
 }
 
+.auth,
+.auth mat-grid-tile { height: calc(100vh - 64px) !important; }

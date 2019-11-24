@@ -10,24 +10,26 @@ Tag; Estado*; Contacto*; Fecha*; Descripción*;
 "pathUrl"
 
 -->
-<div class="container">
-  <div
-    class="profile__header parallax--top parallax--m"
-    [ngStyle]="{'background-image': pathUrl}"
-    (click)="changeProfileHeader()"></div>
-  <!-- <input type="file" name="" id=""> -->
-  <mat-toolbar>
-    <span class="toolbar-flex"></span>
-      <nav mat-tab-nav-bar>
-        <a mat-tab-link
-          *ngFor="let link of navLinks"
-          [routerLink]="link.path"
-          routerLinkActive #rla="routerLinkActive"
-          [active]="rla.isActive">
-        {{link.label}}
-        </a>
-      </nav>
-    <span class="toolbar-flex"></span>
-  </mat-toolbar>
-  <router-outlet></router-outlet>
-</div>
+<app-menu>
+  <div class="container">
+    <div
+      class="profile__header parallax--top parallax--m"
+      [ngStyle]="{'background-image': pathUrl}"
+      (click)="changeProfileHeader()"></div>
+    <!-- <input type="file" name="" id=""> -->
+    <mat-toolbar>
+      <span class="toolbar-flex"></span>
+        <nav mat-tab-nav-bar>
+          <a mat-tab-link
+            *ngFor="let link of navLinks"
+            [routerLink]="link.path"
+            routerLinkActive #rla="routerLinkActive"
+            [active]="rla.isActive">
+          {{link.label}}
+          </a>
+        </nav>
+      <span class="toolbar-flex"></span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </div>
+</app-menu>

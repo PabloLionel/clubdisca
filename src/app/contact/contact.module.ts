@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { CommonsModule } from '../commons/commons.module';
 import { ContactRoutingModule } from './contact-routing.module';
 import { ContactComponent } from './contact.component';
 import { SearchComponent } from './search/search.component';
@@ -29,6 +30,7 @@ const MATCOMPONENTS: any[] = [
     ContactRoutingModule,
     ReactiveFormsModule,
     PipeModule,
+    CommonsModule
   ].concat(MATCOMPONENTS)
 })
 export class ContactModule { }

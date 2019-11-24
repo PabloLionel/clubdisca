@@ -5,8 +5,7 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { AuthComponent } from './auth.component';
 import { SignInModule } from './sign-in/sign-in.module';
 import { SignUpModule } from './sign-up/sign-up.module';
-// import { SignInComponent } from './sign-in/sign-in.component';
-// import { SignUpComponent } from './sign-up/sign-up.component';
+import { CommonsModule } from '../commons/commons.module';
 
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -18,14 +17,13 @@ const MATCOMPONENTS: any[] = [
 @NgModule({
   declarations: [
     AuthComponent,
-    // SignInComponent,
-    // SignUpComponent
   ],
   imports: [
     CommonModule,
     AuthRoutingModule,
     SignInModule,
     SignUpModule,
+    CommonsModule
   ].concat(MATCOMPONENTS)
 })
 export class AuthModule { }

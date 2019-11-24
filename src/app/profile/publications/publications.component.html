@@ -1,11 +1,12 @@
 <!-- class="infinite-scroll" -->
 <div
-      infiniteScroll
-      [infiniteScrollDistance]="1"
-      [infiniteScrollUpDistance]="1.5"
-      [infiniteScrollThrottle]="5"
-      (scrolled)="onScrollDown()"
-      (scrolledUp)="onScrollUp()"
-      [scrollWindow]="false">
-    <app-stories *ngFor="let story of stories" [story]="story"></app-stories>
-  </div>
+  infiniteScroll
+  [infiniteScrollDistance]="1"
+  [infiniteScrollUpDistance]="1.5"
+  [infiniteScrollThrottle]="5"
+  (scrolled)="onScrollDown()"
+  (scrolledUp)="onScrollUp()"
+  [scrollWindow]="false"
+>
+  <app-stories *ngFor="let story of stories" [story]="story"></app-stories>
+</div>
